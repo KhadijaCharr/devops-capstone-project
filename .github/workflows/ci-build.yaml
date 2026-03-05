@@ -6,7 +6,6 @@ on:
   pull_request:
     branches:
       - main
-
 jobs:
   build:
     runs-on: ubuntu:latest
@@ -14,11 +13,11 @@ jobs:
     services:
       postgres:
         image: postgres:alpine
-        ports: 
+        ports:
           - 5432:5432
         env:
           POSTGRES_PASSWORD: pgs3cr3t
-          POSTGRES_DB: testdb 
+          POSTGRES_DB: testdb
         options: >-
           --health-cmd pg_isready
           --health-interval 10s
