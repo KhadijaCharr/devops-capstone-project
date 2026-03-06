@@ -57,7 +57,7 @@ spec:
         - name: source
           workspace: pipeline-workspace          
       taskRef:
-        name: nose
+        name: tests
       params:
       - name: database_uri 
         value: "sqlite:///test.db"
